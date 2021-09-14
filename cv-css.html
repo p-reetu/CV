@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <style>
+        .flex-container {
+            display: flex;
+        }
+        body{
+            background-color: antiquewhite;
+
+        }
+        #profile-pic{
+            height: 200px;
+            width: 200px;
+            border-radius: 100%;
+            margin: 0 50px;
+        }
+        #intro{
+            margin-left: 50px;
+        }
+        #contact, #skills{
+            margin: 0 50px;
+        }
+        #left{
+            margin: 0 0px;
+        }
+        h1,h2{
+            color: rgb(0, 107, 139);
+        }
+        @media (max-width:700px) {
+            .flex-container {
+                display: flex;
+                flex-direction: column;
+            }
+            #intro{
+            margin-left: 0px;
+            }
+            #contact, #skills{
+            margin: 0 0px;
+            }
+            #pic{
+                display: flex;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div id="pic">
+            <img src="profile.png" id="profile-pic" />
+        </div>
+        <div id="intro"><br>
+            <h1><b>PREETI MANCHEKAR</b></h1>
+            <h3>Front End Web Developer | UI/UX Designer</h3>
+            <h3><i>An avid learner seeking opportunities to build a successful career by enhancing knowledge!</i></h3>
+            <hr>
+        </div>
+    </div> 
+    <div class="flex-container">
+        <div id="left">
+            <div id="contact">
+                <h2>Get In Touch!</h2>
+                <h3>Phone:</h3><a href="">+91 8425928624</a>
+                <h3>Email:</h3><a href="">manchekar.preeti@gmail.com</a>
+                <h3>LinkedIn:</h3><a href="">www.linkedin.com/in/preeti-manchekar</a>
+                <h3>GitHub:</h3><a href="">www.github.com/p-reetu</a>
+            </div>
+            <div id="skills">
+                <h2>Skills</h2>
+                    <h3>Design</h3>
+                        <ul>
+                            <li>Figma</li>
+                            <li>Adobe XD</li>
+                            <li>Adobe illustrator</li>
+                        </ul>
+                    <h3>Web Development</h3>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Bootstrap</li>
+                            <li>Javascript</li>
+                        </ul>
+                    <h3>Programming Languages</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>Java</li>
+                        </ul>
+            </div>
+        </div>
+        <div id="right">
+            <h2>Qualification</h2>
+            <table>
+                <tr>
+                    <td>X</td>
+                    <td>St. Xavier's High School</td>
+                    <td>93.80%</td>
+                </tr>
+                <tr>
+                    <td>XII</td>
+                    <td>Fr. Agnel's Jr. College</td>
+                    <td>73.23%</td>
+                </tr>
+                <tr>
+                    <td>B.E. &nbsp &nbsp &nbsp &nbsp</td>
+                    <td>Pillai College of Engineering &nbsp &nbsp</td>
+                    <td>9.67 CGPA</td>
+                </tr>
+            </table>
+            <br>
+            <h2>Experience</h2>
+            <ul>
+                <li><b>Web Development Internship</b> — July 2021,
+                    Sahu Technologies, Mumbai
+                </li><br>
+                <li><b>FrontEnd Development Internship</b> — Augst 2021,
+                    Education4ol
+                </li>
+            </ul>
+            <h2>Trainings</h2>
+            <ul>
+                <li>Introduction to Cloud Development with HTML, CSS and JS</li>
+                <li>freeCodeCamp-Responsive Web Design Developer</li>
+                <li>TCS iON Career Edge - Young Professional</li>
+                <li>Google UX Design Specialization </li>
+            </ul>
+            <h2>Projects</h2>
+            <ul>
+                <li>Event Planning and Management — Python web-application</li>
+                <li>ATM Simulator — A java desktop application </li>
+                <li>A mobile-ordering chatbot app for a sandwich shop — Flow using Figma</li>
+                <li>Responsive website to order personalized sweatshirts — Flow using Adobe XD</li>
+                <li>A tool to help people remember to take medicine on time — App and website flow using Figma</li>
+            </ul>
+            <h2>Achievement</h2>
+            <p>One of the top 5 rankers of the Computer and Information Technology branch for the Academic year 2019-20. <br> SGPA: 9.90.</p>
+            <h2>Languages</h2>
+            English-Marathi-Hindi-Spanish
+        </div>
+    </div>
+    <br>
+    <hr>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241412.4989020307!2d72.89307143078283!3d19.016623859829366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b9f0b81f13ad%3A0x3c12f7681185f869!2sNavi%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1629358464214!5m2!1sen!2sin" width="1250" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</body>
+</html>
