@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        #sub-div{
+            background-color: rgb(212, 255, 231);
+            background-image: url("https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1974&q=80");
+            border-radius: 10px;
+            padding: 20px 50px;
+            box-shadow: 3px 3px 20px rgb(146, 146, 146);
+            margin: auto;
+            width: 40%;
+            display: block;
+        }
+        input[type="text"],input[type="password"],input[type="email"],input[type="date"]{
+            width:100%;
+            height: 30px;
+        }
+        select{
+            padding: 5px;
+            width: 50%;
+        }
+        input[type="submit"]{
+            align-content: center;
+            padding: 10px;
+        }
+        @media (max-width:500px) {
+            #sub-div{
+                width:80%;
+                padding:20px 5px;
+            }
+            h1{
+                font-size: 95%;
+            }
+            input[type="text"],input[type="password"],input[type="email"],input[type="date"]{
+                width: 95%;
+                height: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Register Yourself Today!!!</h1>
+        <div id="sub-div">
+            <form name="myForm" id="myForm" onsubmit="return validateForm()" >
+                <label>Username</label><br>
+                <input type="text" name="un" required maxlength="20">
+
+                <br><br>
+                <label>Email</label><br>
+                <input type="email" name="em" required>
+
+                <br><br>
+                <label>Password</label><br>
+                <input type="password" minlength="8" name="pass" required>
+
+                <br><br>
+                <label>Date of Birth</label><br>
+                <input type="date" name="dob" required>
+
+                <br><br>
+                <label>City</label><br>
+                <select name="city">
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Navi Mumbai">Navi Mumbai</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Jaipur">Jaipur</option>
+                </select>
+
+                <br><br>
+                <label>Programming Languages</label><br>
+                
+                <input type="checkbox" id="c" name="c" value="C">
+                <label for="c"> C</label><br>
+
+                <input type="checkbox" id="cpp" name="cpp" value="C++">
+                <label for="cpp"> C++</label><br>
+
+                <input type="checkbox" id="java" name="java" value="Java">
+                <label for="java"> JAVA</label><br> 
+
+                <input type="checkbox" id="js" name="js" value="Javascript">
+                <label for="js"> JavaScript</label><br>
+
+                <input type="checkbox" id="python" name="python" value="Python">
+                <label for="python"> Python</label><br>
+
+                <br>
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            let un = document.forms["myForm"]["un"].value;
+            let mail = document.forms["myForm"]["em"].value;
+            let pwd = document.forms["myForm"]["pass"].value;
+            let dob = document.forms["myForm"]["dob"].value;
+            let city = document.forms["myForm"]["city"].value;
+
+            let c = document.forms["myForm"]["c"];
+            let cpp = document.forms["myForm"]["cpp"];
+            let jv = document.forms["myForm"]["java"];
+            let js = document.forms["myForm"]["js"];
+            let py = document.forms["myForm"]["python"];
+
+            const arr = [];
+            
+            if(c.checked==true){
+                arr.push("C");
+            }
+            if(cpp.checked==true){
+                arr.push(" C++");
+            }
+            if(jv.checked==true){
+                arr.push(" Java");
+            }
+            if(js.checked==true){
+                arr.push(" JavaScript");
+            }
+            if(py.checked==true){
+                arr.push(" Python");
+            }
+
+            if (hasLowerCase(pwd) && hasUpperCase(pwd) && hasSpecialCharacter(pwd)) {
+                if(validateDate()){
+                    alert(`Registration Successful!\n\n
+                            Username: ${un}\n
+                            Email: ${mail}\n
+                            Password: ${pwd}\n
+                            DOB: ${dob}\n
+                            City: ${city}\n
+                            Programming Languages: ${arr}\n
+                    `);
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+            else{
+                alert("Password should contain at least one lowercase letter, one uppercase letter and one special character!");
+                return false;
+            }
+        } 
+        function validateDate(){
+
+            let dob = document.forms["myForm"]["dob"].value;
+
+                const d = new Date();
+                const dd = parseInt(dob.slice(8,10));
+                const mm = parseInt(dob.slice(5,7));
+                const yyyy = parseInt(dob.slice(0,4));
+
+                if(d.getFullYear() >= yyyy){
+                    if(d.getFullYear() == yyyy){
+                        if(d.getMonth()+1 >= mm){
+                            if(d.getMonth()+1 == mm){
+                                if(d.getDate() > dd){
+                                    return true;
+                                }
+                                else{
+                                    alert("Enter Date older than today's date!");
+                                    return false;
+                                }
+                            }
+                            else{
+                               return true;
+                            }
+                        }
+                        else{
+                            alert("Enter Date older than today's date!");
+                            return false;
+                        }
+                    }
+                    else{
+                        return true;
+                    }
+                }
+                else{
+                    alert("Enter Date older than today's date!");
+                    return false;
+                }
+        }
+        function hasLowerCase(str) {
+            return str.toUpperCase() != str;
+        }
+        function hasUpperCase(str) {
+            return str.toLowerCase() != str;
+        }
+        function hasSpecialCharacter(str){
+            return (/[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(str));
+        }
+    </script>
+</body>
+</html>
