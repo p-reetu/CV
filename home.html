@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Equity Explorer</title>
+    <style>
+        :root {
+        --color1: #fffed2;
+        --color2: #77f8f1;
+        --bg: #080b12;
+        }
+        body{
+            background-color: var(--bg);
+        }
+        nav{
+            background-color: var(--bg);
+        }
+        .second-navbar{
+            background-color: var(--color2);
+            height: fit-content;
+        }
+        #name{
+            color: var(--color2);
+        }
+        #search-button{
+            border: 1px solid var(--color2);
+            color: var(--color2);
+        }
+        #search-button:hover{
+            border: 1px solid var(--color2);
+            color: var(--bg);
+            background-color: var(--color2);
+        }
+        #search-box-input{
+            width: 40vw;
+            background-color: var(--bg);
+            border-color: var(--color2);
+            color: var(--color1);
+        }
+        .nav-link{
+            color: var(--bg);
+            font-weight: bold;
+        }
+        #profile-nav-link{
+            color: var(--color2);
+            font-weight:normal;
+        }
+        marquee{
+            color: white;
+            border-bottom: 0.1px solid grey;
+        }
+        marquee p{
+            display: inline-block;
+            color: var(--color2);
+            padding-right: 15px;
+            margin-bottom: 0;
+        }
+        #down-stock{
+            color: var(--color1);
+        }
+        #logo{
+            height: 2rem;
+            padding: 0 10px;
+        }
+        #user-icon{
+            height: 20px;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        #hero-image{
+            width: 40vw;
+        }
+        #main-heading{
+            color: var(--color1);
+            margin-top: 120px;
+        }
+        #cta{
+            background-color: var(--color2);
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <marquee>
+                    NIFTY BANK 39,947.30 <p> 0.87% ▲ </p> 
+                    BAJFINANCE 7,865.55 <p> 0.03% ▲ </p>
+                    HDFCBANK 1,670.30 <p id="down-stock"> -1.01% ▼ </p>
+                    NIFTY 50 18,477.05 <p> 0.76% ▲ </p>
+                    INDIGO 2,052.85 <p id="down-stock">-0.98% ▼ </p>
+                    RELIANCE 2,707.60 <p> 0.27% ▲ </p>
+                    MARUTI 7,657.00 <p> 2.14% ▲ </p>
+
+                    NIFTY BANK 39,947.30 <p> 0.87% ▲ </p> 
+                    BAJFINANCE 7,865.55 <p> 0.03% ▲ </p>
+                    HDFCBANK 1,670.30 <p id="down-stock"> -1.01% ▼ </p>
+                    NIFTY 50 18,477.05 <p> 0.76% ▲ </p>
+                    INDIGO 2,052.85 <p id="down-stock">-0.98% ▼ </p>
+                    RELIANCE 2,707.60 <p> 0.27% ▲ </p>
+                    MARUTI 7,657.00 <p> 2.14% ▲ </p>
+                </marquee>
+            </div>
+        </div>
+        <nav class="navbar navbar-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" id="name" href="#"><img src="Logo.png" id="logo" />Equity Explorer</a>
+              <div class="position-absolute top-50 start-50 translate-middle">
+                <form class="d-flex">
+                    <input class="form-control me-2" id="search-box-input" type="search" placeholder="Search for Companies, Symbols" aria-label="Search">
+                    <button class="btn btn-outline-light" id="search-button" type="submit">Search</button>
+                </form>
+              </div>
+              <div class="d-flex">
+                  <img src="user.png" id="user-icon" />
+                  <a class="nav-link" id="profile-nav-link" href="">Profile</a>
+              </div>
+            </div>
+        </nav>
+        <div class="second-navbar">
+        <ul class="nav nav-tabs justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Explore</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Learn</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Portfolio</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Watchlist</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">ChatBot</a>
+            </li>
+        </ul>
+        </div>
+    </header>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="" style="margin-left: 50px;">
+                        <h1 id="main-heading"><b>Everything about Equity<br> from E to Y</b></h1><br>
+                        <h5 class="text-muted">
+                            <p>
+                                Explore various companies, learn investing, stock markets, <br>
+                                track your favouite stocks, create portfolio, create watchlists,<br> 
+                                get recommendations about buying and selling stocks...
+                            </p>
+                        </h5><br>
+                        <button class="btn btn-light" id="cta">Explore Now ➝</button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="hero-image.png" id="hero-image" />
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
